@@ -239,6 +239,10 @@ export class MentionSuggestions extends Component {
       return;
     }
 
+    if (mention.get('disabled')) {
+      return;
+    }
+
     if (this.props.onAddMention) {
       this.props.onAddMention(mention);
     }
